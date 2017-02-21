@@ -2,17 +2,17 @@ const React = require('react');
 
 class Bomb extends React.Component{
 
-  constructor(){
+  constructor(props){
     super();
 
     this.state = {
-      secondsLeft: this.props.initialCount,
+      secondsLeft: props.initialCount,
     }
   }
   render(){
     return (
       <div>
-        <p>{this.state.secondsLeft ? this.state.secondsLeft + 'seconds left before I go boom!' : 'Boom!' } </p>
+        <p>{this.state.secondsLeft != 0 ? this.state.secondsLeft + ' seconds left before I go boom!' : 'Boom!'}</p>
       </div>
     );
   }
